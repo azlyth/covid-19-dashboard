@@ -1,3 +1,15 @@
+## Requirements
+
+Docker & Docker Compose
+
+## Development
+
+- Run `make dev` at the root of this project.
+- Visit the app at [http://localhost:3000](http://localhost:3000).
+- Make your code changes! The app should be live-reloaded whenever you save.
+- Optional: run `make dev_skip_build` if the Docker image and container already exist from a previous run of `make dev`.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
