@@ -1,3 +1,7 @@
 footer {
   text-align: center;
 }
+
+footer h6 {
+  margin: 0.5em 0;
+}
