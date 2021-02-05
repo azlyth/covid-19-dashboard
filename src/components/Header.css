@@ -1,0 +1,13 @@
+header {
+  background: #B947A7;
+}
+
+.headerContainer {
+  display: inline-block;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+.headerContainer h1 {
+  line-height: 1;
+}
