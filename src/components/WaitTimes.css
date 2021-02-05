@@ -1,0 +1,18 @@
+.waitTimeSection {
+  margin: 5em 0;
+}
+
+.waitTimeContainer {
+  width: 50%;
+  margin: auto;
+}
+
+@media screen and (max-width: 500px){
+  .waitTimeContainer {
+    width: 85%;
+  }
+}
+
+.waitTimeContainer h6 {
+  margin: 0.5em 0;
+}
