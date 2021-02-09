@@ -9,6 +9,13 @@ class LocationCard extends React.Component {
   render() {
     return(
       <div className='locationCard'>
+        <div className='locationTimeContainer'>
+          <p>{this.props.location}</p>
+          <p>{this.props.time}</p>
+        </div>
+        <div className='lastReportedContainer'>
+          <p>last reported {this.props.lastReported}</p>
+        </div>
       </div>
     );
   }

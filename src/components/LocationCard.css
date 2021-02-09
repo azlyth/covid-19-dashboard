@@ -4,4 +4,17 @@
   width: 14em;
   height: 9em;
   margin-top: 1em;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+
+.locationTimeContainer p {
+  margin: 0.1em 0;
+  font-size: 1.3em;
+}
+
+.lastReportedContainer p {
+  font-size: 0.8em;
 }
