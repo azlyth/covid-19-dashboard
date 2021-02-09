@@ -16,3 +16,9 @@
 .waitTimeContainer h6 {
   margin: 0.5em 0;
 }
+
+.locationCardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
