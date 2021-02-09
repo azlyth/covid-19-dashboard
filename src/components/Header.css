@@ -4,7 +4,8 @@ header {
 }
 
 .headerContainer {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   text-align: left;
   letter-spacing: -0.01em;
 }
