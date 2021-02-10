@@ -1,6 +1,7 @@
 import React from 'react';
 import './WaitTimes.css';
 import LocationCard from './LocationCard';
+import SearchBar from './SearchBar';
 
 class WaitTimes extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class WaitTimes extends React.Component {
       <section className='waitTimeSection'>
         <div className='waitTimeContainer'>
           <h6>Wait Times as of {this.state.time} {this.state.date}</h6>
+          <SearchBar></SearchBar>
           {/* TODO: Create locationCards using data and loop */}
           {/* TODO: Create 'dummy' cards with 0 height  to maintain spacing when numCards % 3 != 0 */}
           <div className='locationCardContainer'>

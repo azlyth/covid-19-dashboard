@@ -5,6 +5,8 @@
 .waitTimeContainer {
   width: 50%;
   margin: auto;
+  display: flex;
+  flex-flow: column;
 }
 
 @media screen and (max-width: 500px){
@@ -20,5 +22,5 @@
 .locationCardContainer {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
