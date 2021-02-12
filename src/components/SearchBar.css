@@ -5,4 +5,18 @@
   height: 4em;
   margin-top: 2em;
   margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchIconContainer {
+  padding: 1em;
+}
+
+.searchInputContainer input {
+  border: none;
+}
+.searchInputContainer input:focus {
+  outline: none;
 }
