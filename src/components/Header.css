@@ -3,6 +3,10 @@ header {
   border-bottom: 3px solid #000000;
 }
 
+header.showLinks {
+  opacity: 50%;
+}
+
 .headerContainer {
   display: flex;
   justify-content: space-around;
@@ -10,13 +14,25 @@ header {
   letter-spacing: -0.01em;
 }
 
+.headerTextContainer {
+  width: 60%;
+}
+
 .headerContainer h1 {
   line-height: 1;
 }
 
+.headerContainer.showLinks h1 {
+  visibility: hidden;
+}
+
+.menuContainer {
+  width: 1em;
+}
+
 .menuIcon {
   font-size: 1.5em;
-  margin: 1em;
+  margin-top: 1.5em;
 }
 
 .menuIcon:hover {
