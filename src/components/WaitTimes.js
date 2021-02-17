@@ -1,4 +1,5 @@
 import React from 'react';
+import * as d3 from 'd3-fetch';
 import './WaitTimes.css';
 import LocationCard from './LocationCard';
 import SearchBar from './SearchBar';
@@ -11,6 +12,12 @@ class WaitTimes extends React.Component {
       date: 'today',
       time: '10 am'
     };
+  }
+
+  componentDidMount() {
+    d3.csv('https://raw.githubusercontent.com/astoria-tech/nyc-covid19-testing-wait-times/main/wait-times.csv').then(function(data) {
+      console.log(data);
+    });
   }
   
   render() {
