@@ -7,12 +7,15 @@
   text-align: center;
   display: flex;
   flex-flow: column;
-  justify-content: end;
+  justify-content: space-around;
 }
 
 .locationTimeContainer p {
   margin: 0.1em 0;
-  font-size: 1.3em;
+}
+
+.lastReportedContainer {
+  margin-top: auto;
 }
 
 .lastReportedContainer p {

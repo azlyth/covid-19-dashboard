@@ -9,7 +9,7 @@ class WaitTimes extends React.Component {
     super(props)
     this.state = {
       updateTime: null,
-      locationTimes: {}
+      locationTimes: []
     };
   }
 
@@ -22,12 +22,17 @@ class WaitTimes extends React.Component {
         mostRecentDate = reportedTime > mostRecentDate ? reportedTime : mostRecentDate;
         locationTimeMap.set(
           data[i]['clinic'],
-          {'reportedTime': reportedTime, 'waitTime': data[i]['wait_time_minutes']}
+          {'reportedTime': reportedTime.toLocaleString(), 'waitTime': data[i]['wait_time_minutes'] + ' minutes'}
         );
       }
+
+      let locationCards = [];
+      locationTimeMap.forEach((value, key) => {
+        locationCards.push(<LocationCard key={key} location={key} time={value['waitTime']} lastReported={value['reportedTime']} />)
+      });
       this.setState({
         updateTime: mostRecentDate.toDateString(),
-        locationTimes: locationTimeMap
+        locationTimes: locationCards
       });
     });
   }
@@ -38,18 +43,9 @@ class WaitTimes extends React.Component {
         <div className='waitTimeContainer'>
           <h6>Wait Times as of {this.state.updateTime}</h6>
           <SearchBar></SearchBar>
-          {/* TODO: Create locationCards using data and loop */}
           {/* TODO: Create 'dummy' cards with 0 height  to maintain spacing when numCards % 3 != 0 */}
           <div className='locationCardContainer'>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
-            <LocationCard location='196 Albany' time='0 - 30 minutes' lastReported='10:30 am'></LocationCard>
+            {this.state.locationTimes}
           </div>
         </div>
       </section>
