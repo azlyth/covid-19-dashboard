@@ -7,16 +7,28 @@ import SearchBar from './SearchBar';
 class WaitTimes extends React.Component {
   constructor(props) {
     super(props)
-    // TODO: Set date and time from data
     this.state = {
-      date: 'today',
-      time: '10 am'
+      updateTime: null,
+      locationTimes: {}
     };
   }
 
   componentDidMount() {
-    d3.csv('https://raw.githubusercontent.com/astoria-tech/nyc-covid19-testing-wait-times/main/wait-times.csv').then(function(data) {
-      console.log(data);
+    d3.csv('https://raw.githubusercontent.com/astoria-tech/nyc-covid19-testing-wait-times/main/wait-times.csv').then((data) => {
+      let locationTimeMap = new Map();
+      let mostRecentDate = new Date(-8640000000000000); // Set to the minimum possible data value
+      for (let i = 0; i < data.length; i++){
+        let reportedTime = new Date(data[i]['reported_time_human']);
+        mostRecentDate = reportedTime > mostRecentDate ? reportedTime : mostRecentDate;
+        locationTimeMap.set(
+          data[i]['clinic'],
+          {'reportedTime': reportedTime, 'waitTime': data[i]['wait_time_minutes']}
+        );
+      }
+      this.setState({
+        updateTime: mostRecentDate.toDateString(),
+        locationTimes: locationTimeMap
+      });
     });
   }
   
@@ -24,7 +36,7 @@ class WaitTimes extends React.Component {
     return(
       <section className='waitTimeSection'>
         <div className='waitTimeContainer'>
-          <h6>Wait Times as of {this.state.time} {this.state.date}</h6>
+          <h6>Wait Times as of {this.state.updateTime}</h6>
           <SearchBar></SearchBar>
           {/* TODO: Create locationCards using data and loop */}
           {/* TODO: Create 'dummy' cards with 0 height  to maintain spacing when numCards % 3 != 0 */}
