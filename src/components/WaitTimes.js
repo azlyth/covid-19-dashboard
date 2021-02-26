@@ -1,3 +1,4 @@
+import Fuse from 'fuse.js';
 import React from 'react';
 import * as d3 from 'd3-fetch';
 import './WaitTimes.css';
@@ -32,13 +33,28 @@ class WaitTimes extends React.Component {
       });
       this.setState({
         updateTime: mostRecentDate.toDateString(),
-        locationTimes: locationCards
+        locationTimes: locationCards,
+        originalLocationTimes: locationCards
       });
     });
   }
 
   handleChange = (event) => {
-    console.log(this.state);
+    let locationTimes = this.state.originalLocationTimes;
+    let options = {
+      keys: ['key']
+    };
+
+    let fuse = new Fuse(locationTimes, options);
+    let results = fuse.search(event.target.value);
+
+    if (event.target.value.length) {
+      results = results.map((result) => result.item);
+    } else {
+      results = this.state.originalLocationTimes;
+    }
+
+    this.setState({locationTimes: results});
   }
   
   render() {
