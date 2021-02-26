@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
           <FontAwesomeIcon icon={faSearch} />
         </div>
         <div className='searchInputContainer'>
-          <input type='text' placeholder='Search'></input>
+          <input type='text' placeholder='Search' onChange={this.props.searchFunction}></input>
         </div>
       </div>
     );

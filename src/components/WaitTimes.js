@@ -36,13 +36,17 @@ class WaitTimes extends React.Component {
       });
     });
   }
+
+  handleChange = (event) => {
+    console.log(this.state);
+  }
   
   render() {
     return(
       <section className='waitTimeSection'>
         <div className='waitTimeContainer'>
           <h6>Wait Times as of {this.state.updateTime}</h6>
-          <SearchBar></SearchBar>
+          <SearchBar searchFunction={this.handleChange}></SearchBar>
           {/* TODO: Create 'dummy' cards with 0 height  to maintain spacing when numCards % 3 != 0 */}
           <div className='locationCardContainer'>
             {this.state.locationTimes}
