@@ -26,6 +26,14 @@ class Header extends React.Component {
         <div className={'headerContainer' + (this.state.showLinks ? (' showLinks') : '')}>
           <div className='headerTextContainer'>
             <h1>NYC health and hospitals <br></br> covid 19 testing wait times</h1>
+            <div className={'menuLinks' + (this.state.showLinks ? (' showLinks') : '')}>
+              <ul>
+                <li>Data Archive</li>
+                <li>Data Visualization Dashboard</li>
+                <li>Original Document</li>
+                <li>About this Project</li>
+              </ul>
+            </div>
           </div>
           <div className='menuContainer'>
             <FontAwesomeIcon className='menuIcon' icon={this.state.showLinks ? faTimes : faBars} onClick={this.toggleMenu}/>

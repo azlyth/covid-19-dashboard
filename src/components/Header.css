@@ -16,6 +16,7 @@ header.showLinks {
 
 .headerTextContainer {
   width: 60%;
+  position: relative;
 }
 
 .headerContainer h1 {
@@ -37,4 +38,21 @@ header.showLinks {
 
 .menuIcon:hover {
   cursor: pointer;
+}
+
+.menuLinks {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  display: none;
+}
+
+.menuLinks.showLinks {
+  display: block;
+}
+
+.menuLinks ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
