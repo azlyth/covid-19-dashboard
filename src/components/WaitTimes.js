@@ -54,6 +54,11 @@ class WaitTimes extends React.Component {
       results = this.state.originalLocationTimes;
     }
 
+    // Add an extra invisible card to maintain proper spacing
+    if (results.length % 3 === 2) {
+      results.push(<LocationCard extraCard={true}></LocationCard>)
+    }
+
     this.setState({locationTimes: results});
   }
   
@@ -63,7 +68,6 @@ class WaitTimes extends React.Component {
         <div className='waitTimeContainer'>
           <h6>Wait Times as of {this.state.updateTime}</h6>
           <SearchBar searchFunction={this.handleChange}></SearchBar>
-          {/* TODO: Create 'dummy' cards with 0 height  to maintain spacing when numCards % 3 != 0 */}
           <div className='locationCardContainer'>
             {this.state.locationTimes}
           </div>

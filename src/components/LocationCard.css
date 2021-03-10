@@ -10,6 +10,11 @@
   justify-content: space-around;
 }
 
+.locationCard.hideCard {
+  height: 0;
+  visibility: hidden;
+}
+
 .locationTimeContainer p {
   margin: 0.1em 0;
 }
