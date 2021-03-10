@@ -2,7 +2,7 @@ import './About.css';
 
 function About(){
   return (
-    <section className='aboutSection'>
+    <section className='aboutSection' id='aboutSection'>
       <div className='aboutContainer'>
         <h6>About This Project</h6>
         <p>This information is from the dashboard created by NYC Health and Hospitals. Access an archive of the wait time data, and explore the data with the data visualization dashboard.</p>

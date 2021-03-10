@@ -28,10 +28,11 @@ class Header extends React.Component {
             <h1>NYC health and hospitals <br></br> covid 19 testing wait times</h1>
             <div className={'menuLinks' + (this.state.showLinks ? (' showLinks') : '')}>
               <ul>
-                <li>Data Archive</li>
-                <li>Data Visualization Dashboard</li>
-                <li>Original Document</li>
-                <li>About this Project</li>
+                <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/astoria-tech/nyc-covid19-testing-wait-times'>Data Archive</a></li>
+                <li><a target='_blank' rel='noopener noreferrer' href='https://datastudio.google.com/u/0/reporting/1506fb15-ab88-4226-a251-59a114affd9c/page/EdRsB'>Data Visualization Dashboard</a></li>
+                <li><a target='_blank' rel='noopener noreferrer' href='https://hhinternet.blob.core.windows.net/wait-times/testing-wait-times.pdf'>Original Document</a></li>
+                <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/astoria-tech/covid-19-dashboard'>GitHub for this Project</a></li>
+                <li><a href='#aboutSection'>About this Project</a></li>
               </ul>
             </div>
           </div>
