@@ -10,6 +10,15 @@
   justify-content: space-around;
 }
 
+.locationCard.grey {
+  background-color: #DAD7CF;
+}
+
+.locationCard.black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 .locationCard.hideCard {
   height: 0;
   visibility: hidden;
@@ -25,5 +34,5 @@
 }
 
 .locationCard p.lastReportedText {
-  font-size: 0.7em;
+  font-size: 0.55em;
 }

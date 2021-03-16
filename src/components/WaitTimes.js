@@ -21,15 +21,27 @@ class WaitTimes extends React.Component {
       for (let i = 0; i < data.length; i++){
         let reportedTime = new Date(data[i]['reported_time_human']);
         mostRecentDate = reportedTime > mostRecentDate ? reportedTime : mostRecentDate;
+
+        let backgroundColor = 'white';
+        if (data[i]['wait_time_minutes'] > 30 && data[i]['wait_time_minutes'] <= 60) {
+          backgroundColor = 'grey';
+        } else if (data[i]['wait_time_minutes'] > 60) {
+          backgroundColor = 'black';
+        }
+
         locationTimeMap.set(
           data[i]['clinic'],
-          {'reportedTime': reportedTime.toLocaleString(), 'waitTime': data[i]['wait_time_minutes'] + ' minutes'}
+          {
+            'reportedTime': reportedTime.toLocaleString(),
+            'waitTime': (data[i]['wait_time_minutes'] > 30 ? data[i]['wait_time_minutes'] : '0 - 30') + ' minutes', // Consolidate all times less than 30 minutes to avoid confusion
+            'backgroundColor': backgroundColor
+          }
         );
       }
 
       let locationCards = [];
       locationTimeMap.forEach((value, key) => {
-        locationCards.push(<LocationCard key={key} location={key} time={value['waitTime']} lastReported={value['reportedTime']} />)
+        locationCards.push(<LocationCard key={key} location={key} time={value['waitTime']} lastReported={value['reportedTime']} backgroundColor={value['backgroundColor']}/>)
       });
       this.setState({
         updateTime: mostRecentDate.toDateString(),
