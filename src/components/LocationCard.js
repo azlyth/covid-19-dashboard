@@ -13,13 +13,9 @@ class LocationCard extends React.Component {
   render() {
     return(
       <div className={'locationCard' + (this.state.hideCard ? (' hideCard') : '')}>
-        <div className='locationTimeContainer'>
-          <p>{this.props.location}</p>
-          <p>{this.props.time}</p>
-        </div>
-        <div className='lastReportedContainer'>
-          <p>last reported {this.props.lastReported}</p>
-        </div>
+        <p className='locationText'>{this.props.location}</p>
+        <p className='timeText'>{this.props.time}</p>
+        <p className='lastReportedText'>last reported {this.props.lastReported}</p>
       </div>
     );
   }
