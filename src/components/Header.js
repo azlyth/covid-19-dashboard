@@ -14,7 +14,6 @@ class Header extends React.Component {
   }
 
   toggleMenu() {
-    console.log('click');
     this.setState(state => ({
       showLinks: !state.showLinks
     }));
