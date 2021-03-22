@@ -20,6 +20,10 @@
   padding: 1em;
 }
 
+.searchInputContainer {
+  overflow: hidden;
+}
+
 .searchInputContainer input {
   border: none;
 }
