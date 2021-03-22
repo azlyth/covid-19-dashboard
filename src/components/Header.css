@@ -19,11 +19,11 @@ header.showLinks {
   position: relative;
 }
 
-.headerContainer h1 {
+.headerContainer h2 {
   line-height: 1;
 }
 
-.headerContainer.showLinks h1 {
+.headerContainer.showLinks h2 {
   visibility: hidden;
 }
 
@@ -45,6 +45,7 @@ header.showLinks {
   top: 2.5em;
   right: 0;
   display: none;
+  font-size: 0.8em;
 }
 
 .menuLinks.showLinks {
