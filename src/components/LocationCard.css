@@ -10,6 +10,12 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 500px){
+  .locationCard {
+    width: 100%;
+  }
+}
+
 .locationCard.grey {
   background-color: #DAD7CF;
 }

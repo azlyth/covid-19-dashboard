@@ -68,7 +68,7 @@ class WaitTimes extends React.Component {
 
     // Add an extra invisible card to maintain proper spacing
     if (results.length % 3 === 2) {
-      results.push(<LocationCard extraCard={true}></LocationCard>)
+      results.push(<LocationCard key='extraCard' extraCard={true}></LocationCard>)
     }
 
     this.setState({locationTimes: results});

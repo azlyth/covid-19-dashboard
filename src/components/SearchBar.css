@@ -10,6 +10,12 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 500px){
+  .searchBar {
+    width: 100%;
+  }
+}
+
 .searchIconContainer {
   padding: 1em;
 }
