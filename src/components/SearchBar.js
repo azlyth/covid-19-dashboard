@@ -4,10 +4,6 @@ import { faSearch} from '@fortawesome/free-solid-svg-icons'
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  
   render() {
     return(
       <div className='searchBar'>
