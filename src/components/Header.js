@@ -24,7 +24,7 @@ class Header extends React.Component {
       <header className={this.state.showLinks ? 'showLinks' : ''}>
         <div className={'headerContainer' + (this.state.showLinks ? (' showLinks') : '')}>
           <div className='headerTextContainer'>
-            <h2>NYC health and hospitals <br></br> covid 19 testing wait times</h2>
+            <h2>NYC health and hospitals <br></br> covid-19 testing wait times</h2>
             <div className={'menuLinks' + (this.state.showLinks ? (' showLinks') : '')}>
               <ul>
                 <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/astoria-tech/nyc-covid19-testing-wait-times'>Data Archive</a></li>
