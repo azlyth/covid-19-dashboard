@@ -1,8 +1,14 @@
-## Requirements
+# About
+
+This project is a dashboard that displays wait times for COVID-19 testing across various locations in NYC. The data used in this project can be viewed [here](https://github.com/astoria-tech/nyc-covid19-testing-wait-times).
+
+This project is built with `create-react-app`.
+
+# Requirements
 
 Docker & Docker Compose
 
-## Development
+# Development
 
 - Run `make dev` at the root of this project.
 - Visit the app at [http://localhost:3000](http://localhost:3000).
