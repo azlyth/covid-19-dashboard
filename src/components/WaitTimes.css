@@ -19,6 +19,12 @@
   margin: 0.5em 0;
 }
 
+/* .waitTimeContainer input {
+  width: 100em;
+  height: 2.7em;
+  border: 4px solid black;
+} */
+
 .locationCardContainer {
   display: flex;
   flex-flow: row wrap;
