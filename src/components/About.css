@@ -4,6 +4,13 @@
   border-bottom: 3px dashed #000000;
 }
 
+@media (prefers-color-scheme: dark) {
+  .aboutSection {
+    border-top: 3px dashed #ffffff;
+    border-bottom: 3px dashed #ffffff;
+  }
+}
+
 .aboutContainer {
   width: 50%;
   margin: auto;
