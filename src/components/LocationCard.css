@@ -27,16 +27,18 @@
 
 @media (prefers-color-scheme: dark) {
   .locationCard {
-    background-color: #dc58d5;
+    background-color: #B947A7;
+    ;
     border-color: #ffffff;
   }
   
   .locationCard.grey {
-    background-color: #74166f;
+    background-color: #541445;
+    ;
   }
   
   .locationCard.black {
-    background-color: #593856;
+    background-color: #332A32;
     color: #FFFFFF;
   }
 }

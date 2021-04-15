@@ -20,6 +20,11 @@
   .searchBar {
     border: 3px solid #ffffff;
   }
+  .searchInputContainer input {
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+  }
 }
 
 .searchIconContainer {
@@ -32,8 +37,6 @@
 
 .searchInputContainer input {
   border: none;
-  background-color: #000000;
-  color: #ffffff;
   height: 2.7em;
   width: 20em;
 }

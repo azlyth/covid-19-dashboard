@@ -38,7 +38,7 @@ class WaitTimes extends React.Component {
           }
         );
       }
-
+      
       let locationCards = [];
       locationTimeMap.forEach((value, key) => {
         locationCards.push(<LocationCard key={key} location={key} time={value['waitTime']} lastReported={value['reportedTime']} backgroundColor={value['backgroundColor']}/>)
