@@ -2,6 +2,8 @@
 
 This project is a dashboard that displays wait times for COVID-19 testing across various locations in NYC. The data used in this project can be viewed [here](https://github.com/astoria-tech/nyc-covid19-testing-wait-times).
 
+[Live site](https://covidwait.astoria.digital/)
+
 This project is built with `create-react-app`.
 
 # Requirements
