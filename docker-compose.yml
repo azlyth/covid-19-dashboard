@@ -1,7 +1,10 @@
 version: "3.8"
 
 services:
+
   frontend:
+    labels:
+      shipyard.route: /
     build:
       context: .
       dockerfile: Dockerfile
